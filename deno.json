@@ -1,14 +1,24 @@
 {
-    "fmt": {
-        "indentWidth": 4,
-        "lineWidth": 100,
-        "exclude": [
-            ".vscode"
-        ]
-    },
-    "lint": {
-        "rules": {
-            "exclude": ["no-explicit-any"]
-        }
+  "fmt": {
+    "indentWidth": 4,
+    "lineWidth": 100,
+    "exclude": [
+      ".vscode"
+    ]
+  },
+  "lint": {
+    "rules": {
+      "exclude": [
+        "no-explicit-any"
+      ]
     }
+  },
+  "deploy": {
+    "project": "4946f381-9f86-4271-abc3-51e28f7a4699",
+    "exclude": [
+      "**/node_modules"
+    ],
+    "include": [],
+    "entrypoint": "main.ts"
+  }
 }
