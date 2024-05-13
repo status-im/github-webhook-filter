@@ -11,13 +11,14 @@ function get<T>(key: string, def?: T): string | T {
 
 export default {
     debug: parseBool(get("DEBUG", "0")),
-    hostname: get("HOSTNAME", "127.0.0.1"),
+    hostname: get("HOSTNAME", "ghwf.infra.status.im"),
     port: parseInt(get("PORT", "8080")),
     signKey: get("SIGN_KEY", null),
     maxWebhookRetries: parseInt(get("MAX_RETRIES", "3")),
     maxWebhookRetryMs: parseInt(get("MAX_RETRY_MS", "30000")),
     mainRedirect: get("MAIN_REDIRECT", null),
     redisUrl: get("REDIS_URL", null),
+    allowBranches: get("ALLOW_BRANCHES", "release\/*"),
 
     // set by deno deploy
     deployId: get("DENO_DEPLOYMENT_ID", "<unknown>"),
