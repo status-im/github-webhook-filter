@@ -13,4 +13,6 @@ RUN deno cache deps.ts
 COPY . .
 RUN deno cache main.ts
 
+ENV PORT=8080
+
 CMD ["run", "--allow-env", "--allow-net=:8080,discord.com", "main.ts"]
